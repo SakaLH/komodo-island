@@ -3,11 +3,11 @@ Mata Kuliah Desain Web | Tugas Kelompok | Tema: Desa Wisata / Destinasi Wisata
 
 NAMA KELOMPOK : Kelompok 2
 ANGGOTA & PEMBAGIAN TUGAS
-1. (Nama - NIM)  Koordinator / Integrator : struktur folder, menggabungkan file, memastikan semua halaman terhubung
-2. (Nama - NIM)  HTML Content             : struktur HTML5, heading, paragraf, list, komentar
-3. Satria Mahardika - 4525210068  Media & Data             : gambar, alt text, hyperlink, atribut, tabel
-4. (Nama - NIM)  CSS & Layout             : style.css, box model, Flexbox, responsive, embedded font
-5. (Nama - NIM)  Quality & Presenter      : uji link/path/responsive, demo, penjelasan keputusan desain
+1. (Muhammad Rafif Akbar - 4525210125)  Koordinator / Integrator : struktur folder, menggabungkan file, memastikan semua halaman terhubung
+2. (Ridho Sachlan - 4525210066)  HTML Content             : struktur HTML5, heading, paragraf, list, komentar
+3. (Satria Mahardika - 4525210068)  Media & Data             : gambar, alt text, hyperlink, atribut, tabel
+4. (Prevansyah Sjafar - 4525210057)  CSS & Layout             : style.css, box model, Flexbox, responsive, embedded font
+5. (Saka Laksmana Harimurti - 4525210067)  Quality & Presenter      : uji link/path/responsive, demo, penjelasan keputusan desain
 
 CARA MENJALANKAN
 1. Ekstrak file ZIP.
@@ -21,11 +21,10 @@ komodo-island/
   data.html    Tiket, paket, fasilitas, itinerary, kalender musim (5 tabel), tata tertib
   assets/css/style.css
   assets/images/  hero.jpg, 8 ilustrasi, Logo.jpg
-  assets/fonts/   Bricolage Grotesque & Source Sans 3 (woff2)
 
 MATERI YANG DITERAPKAN
 - HTML5 semantik: header, nav, main, section, article, figure, figcaption, address, footer
-- Elemen teks: h1-h4, p, strong, em, small, blockquote + cite, komentar HTML
+- Elemen teks: h1-h4, p, strong, em, small, cite, komentar HTML
 - List: ul, ol, dl (dt/dd), details/summary
 - Media & navigasi: img (alt, width, height, loading), link internal, anchor (#), mailto, tel, link luar (target="_blank" rel="noopener noreferrer")
 - Tabel: caption, thead/tbody/tfoot, th scope, colspan, rowspan
@@ -42,6 +41,4 @@ CATATAN DATA
 - Kutipan pengunjung, nama kontak, email, dan telepon adalah fiktif.
 
 SUMBER ASET
-- Gambar: ilustrasi SVG buatan sendiri (dibuat dengan kode). Boleh diganti foto asli (pastikan hak pakainya)
-  dengan mengganti file dan ekstensi di HTML.
-- Font: Bricolage Grotesque dan Source Sans 3, lisensi SIL Open Font License 1.1 (ada di assets/fonts/).
+- Gambar: ilustrasi di dapatkan melalui internet dan situs dari Komodo National Park.
