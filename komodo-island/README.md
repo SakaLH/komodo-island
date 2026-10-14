@@ -1,11 +1,11 @@
 PROYEK WEBSITE PROFIL RESPONSIF - KOMODO ISLAND (TAMAN NASIONAL KOMODO)
 Mata Kuliah Desain Web | Tugas Kelompok | Tema: Desa Wisata / Destinasi Wisata
 
-NAMA KELOMPOK : Kelompok ##  (isi nomor kelompok)
+NAMA KELOMPOK : Kelompok 2
 ANGGOTA & PEMBAGIAN TUGAS
 1. (Nama - NIM)  Koordinator / Integrator : struktur folder, menggabungkan file, memastikan semua halaman terhubung
 2. (Nama - NIM)  HTML Content             : struktur HTML5, heading, paragraf, list, komentar
-3. (Nama - NIM)  Media & Data             : gambar, alt text, hyperlink, atribut, tabel
+3. Satria Mahardika - 4525210068  Media & Data             : gambar, alt text, hyperlink, atribut, tabel
 4. (Nama - NIM)  CSS & Layout             : style.css, box model, Flexbox, responsive, embedded font
 5. (Nama - NIM)  Quality & Presenter      : uji link/path/responsive, demo, penjelasan keputusan desain
 
@@ -20,7 +20,7 @@ komodo-island/
   galeri.html  8 ilustrasi dalam 4 kategori
   data.html    Tiket, paket, fasilitas, itinerary, kalender musim (5 tabel), tata tertib
   assets/css/style.css
-  assets/images/  hero.svg, 8 ilustrasi, logo.svg
+  assets/images/  hero.jpg, 8 ilustrasi, Logo.jpg
   assets/fonts/   Bricolage Grotesque & Source Sans 3 (woff2)
 
 MATERI YANG DITERAPKAN

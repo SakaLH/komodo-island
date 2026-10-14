@@ -2,85 +2,40 @@
    Komodo Island - style.css
    Tugas Kelompok Desain Web (HTML5 + CSS3 murni)
 
+   Catatan: versi ini TIDAK memakai :root dan var().
+   Semua nilai warna, font, dan ukuran ditulis langsung.
+   Font memakai font sistem (tanpa @font-face):
+   judul = Trebuchet MS, isi = Segoe UI / Calibri.
+   Semua ukuran memakai px (tanpa rem, em, clamp, min, vw).
+   Ukuran judul & kutipan diatur lewat media query.
+
+   Referensi nilai yang dipakai:
+   - Laut dalam  : #0b2f3a
+   - Laut        : #0f6b78
+   - Savana      : #b0963e
+   - Senja       : #f2b04c
+   - Senja tua   : #8a5a07
+   - Busa        : #e1eef0
+   - Langit      : #f4f9fa
+   - Karang gelap: #33484f
+   - Karang      : #c04b55
+   - Putih       : #ffffff
+
    Daftar isi:
-   1. Embedded font (@font-face)
-   2. Variabel & reset
-   3. Tipografi
-   4. Layout dasar (container, section)
-   5. Header & navigasi (Flexbox)
-   6. Hero
-   7. Komponen: tombol, kartu, info strip, kutipan
-   8. Galeri
-   9. Tabel
-  10. List khusus, FAQ, kalender
-  11. Footer
-  12. Responsive (media query)
+   1. Reset
+   2. Tipografi
+   3. Layout dasar (container, section)
+   4. Header & navigasi (Flexbox)
+   5. Hero
+   6. Komponen: tombol, kartu, info strip, kutipan
+   7. Galeri
+   8. Tabel
+   9. List khusus, FAQ, kalender
+  10. Footer
+  11. Responsive (media query)
    ========================================================= */
 
-/* ---------- 1. Embedded font ---------- */
-@font-face {
-  font-family: "Bricolage";
-  src: url("../fonts/bricolage-600.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Bricolage";
-  src: url("../fonts/bricolage-800.woff2") format("woff2");
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Source Sans";
-  src: url("../fonts/sourcesans-400.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Source Sans";
-  src: url("../fonts/sourcesans-600.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Source Sans";
-  src: url("../fonts/sourcesans-700.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* ---------- 2. Variabel & reset ---------- */
-:root {
-  /* Palet warna */
-  --laut-dalam: #0b2f3a;
-  --laut: #0f6b78;
-  --savana: #b0963e;
-  --senja: #f2b04c;
-  --senja-tua: #8a5a07;
-  --busa: #e1eef0;
-  --langit: #f4f9fa;
-  --karang-gelap: #33484f;
-  --karang: #c04b55;
-  --putih: #ffffff;
-
-  --font-judul: "Bricolage", "Trebuchet MS", Arial, sans-serif;
-  --font-isi: "Source Sans", "Segoe UI", Arial, sans-serif;
-
-  --lebar-maks: 1120px;
-  --jarak: 1.5rem;
-  --radius-kecil: 6px;
-  --radius-besar: 28px;
-}
-
+/* ---------- 1. Reset ---------- */
 *,
 *::before,
 *::after {
@@ -94,11 +49,11 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--font-isi);
-  font-size: 1.0625rem;
+  font-family: "Segoe UI", Calibri, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
   line-height: 1.65;
-  color: var(--karang-gelap);
-  background-color: var(--langit);
+  color: #33484f;
+  background-color: #f4f9fa;
 }
 
 img {
@@ -108,112 +63,116 @@ img {
 }
 
 a {
-  color: var(--laut);
+  color: #0f6b78;
   text-underline-offset: 3px;
 }
 
 a:hover {
-  color: var(--laut-dalam);
+  color: #0b2f3a;
 }
 
 a:focus-visible,
 summary:focus-visible {
-  outline: 3px solid var(--senja);
+  outline: 3px solid #f2b04c;
   outline-offset: 3px;
 }
 
-/* ---------- 3. Tipografi ---------- */
+/* ---------- 2. Tipografi ---------- */
 h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-judul);
-  color: var(--laut-dalam);
+  font-family: "Trebuchet MS", "Lucida Grande", Arial, sans-serif;
+  color: #0b2f3a;
   line-height: 1.15;
-  margin: 0 0 0.6em;
+  margin: 0;
 }
 
 h1 {
-  font-size: clamp(2.3rem, 5vw, 3.8rem);
+  font-size: 56px;
   font-weight: 800;
-  letter-spacing: -0.02em;
+  letter-spacing: -1px;
+  margin-bottom: 32px;
 }
 
 h2 {
-  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  font-size: 34px;
   font-weight: 800;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.3px;
+  margin-bottom: 20px;
 }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: 20.8px;
   font-weight: 600;
+  margin-bottom: 12px;
 }
 
 h4 {
-  font-size: 1.1rem;
+  font-size: 17.6px;
   font-weight: 600;
+  margin-bottom: 10px;
 }
 
 p {
-  margin: 0 0 1em;
-  max-width: 68ch;
+  margin: 0 0 16px;
+  max-width: 600px;
 }
 
 strong {
   font-weight: 700;
-  color: var(--laut-dalam);
+  color: #0b2f3a;
 }
 
 small {
-  font-size: 0.875rem;
+  font-size: 14px;
 }
 
-/* ---------- 4. Layout dasar ---------- */
+/* ---------- 3. Layout dasar ---------- */
 .container {
   width: 100%;
-  max-width: var(--lebar-maks);
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 0 var(--jarak);
+  padding: 0 24px;
 }
 
 .section {
-  padding: 4.5rem 0;
+  padding: 72px 0;
 }
 
 .section--kabut {
-  background-color: var(--busa);
+  background-color: #e1eef0;
 }
 
 .section--gelap {
-  background-color: var(--laut-dalam);
+  background-color: #0b2f3a;
   color: #d3e5e9;
 }
 
 .section--gelap h2,
 .section--gelap h3 {
-  color: var(--putih);
+  color: #ffffff;
 }
 
 .section--gelap a {
-  color: var(--senja);
+  color: #f2b04c;
 }
 
 .section-head {
-  margin-bottom: 2.2rem;
+  margin-bottom: 35.2px;
 }
 
 .section-head p {
-  font-size: 1.15rem;
+  font-size: 18.4px;
 }
 
 .skip-link {
   position: absolute;
   left: -999px;
   top: 0;
-  background: var(--senja);
-  color: var(--laut-dalam);
-  padding: 0.6rem 1rem;
+  background: #f2b04c;
+  color: #0b2f3a;
+  padding: 9.6px 16px;
   font-weight: 700;
   z-index: 100;
 }
@@ -222,38 +181,38 @@ small {
   left: 0;
 }
 
-/* ---------- 5. Header & navigasi ---------- */
+/* ---------- 4. Header & navigasi ---------- */
 .site-header {
-  background-color: var(--laut-dalam);
+  background-color: #0b2f3a;
   position: sticky;
   top: 0;
   z-index: 50;
-  border-bottom: 4px solid var(--senja);
+  border-bottom: 4px solid #f2b04c;
 }
 
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
+  gap: 16px;
+  padding-top: 11.2px;
+  padding-bottom: 11.2px;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
+  gap: 11.2px;
   text-decoration: none;
-  color: var(--putih);
-  font-family: var(--font-judul);
+  color: #ffffff;
+  font-family: "Trebuchet MS", "Lucida Grande", Arial, sans-serif;
   font-weight: 800;
-  font-size: 1.2rem;
+  font-size: 19.2px;
   line-height: 1.1;
 }
 
 .brand:hover {
-  color: var(--putih);
+  color: #ffffff;
 }
 
 .brand img {
@@ -263,16 +222,16 @@ small {
 
 .brand span {
   display: block;
-  font-family: var(--font-isi);
+  font-family: "Segoe UI", Calibri, "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
-  font-size: 0.8rem;
+  font-size: 12.8px;
   color: #a9c8cf;
 }
 
 .main-nav ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.3rem;
+  gap: 4.8px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -280,7 +239,7 @@ small {
 
 .main-nav a {
   display: block;
-  padding: 0.55rem 1rem;
+  padding: 8.8px 16px;
   border-radius: 999px;
   color: #d3e5e9;
   text-decoration: none;
@@ -290,35 +249,35 @@ small {
 
 .main-nav a:hover {
   background-color: rgba(255, 255, 255, 0.12);
-  color: var(--putih);
+  color: #ffffff;
 }
 
 .main-nav a[aria-current="page"] {
-  background-color: var(--senja);
-  color: var(--laut-dalam);
+  background-color: #f2b04c;
+  color: #0b2f3a;
 }
 
-/* ---------- 6. Hero ---------- */
+/* ---------- 5. Hero ---------- */
 .hero {
-  background-color: var(--busa);
+  background-color: #e1eef0;
   overflow: hidden;
 }
 
 .hero-inner {
   display: flex;
   align-items: center;
-  gap: 3.5rem;
-  padding-top: 3.5rem;
+  gap: 56px;
+  padding-top: 56px;
   padding-bottom: 0;
 }
 
 .hero-text {
   flex: 1 1 52%;
-  padding-bottom: 3.5rem;
+  padding-bottom: 56px;
 }
 
 .hero-text p {
-  font-size: 1.2rem;
+  font-size: 19.2px;
 }
 
 .hero-media {
@@ -332,47 +291,47 @@ small {
   object-fit: cover;
   /* bentuk gapura / lengkung atas */
   border-radius: 999px 999px 0 0;
-  border: 8px solid var(--senja);
+  border: 8px solid #f2b04c;
   border-bottom: 0;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.9rem;
-  margin-top: 1.6rem;
+  gap: 14.4px;
+  margin-top: 25.6px;
 }
 
 /* Hero halaman dalam (profil, galeri, data) */
 .page-hero {
-  background-color: var(--laut);
+  background-color: #0f6b78;
   color: #e4f2f5;
-  padding: 3.2rem 0 3rem;
+  padding: 51.2px 0 48px;
 }
 
 .page-hero h1 {
-  color: var(--putih);
-  margin-bottom: 0.3em;
+  color: #ffffff;
+  margin-bottom: 16px;
 }
 
 .page-hero p {
-  font-size: 1.2rem;
+  font-size: 19.2px;
   margin: 0;
 }
 
 .breadcrumb {
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
+  font-size: 15.2px;
+  margin-bottom: 16px;
 }
 
 .breadcrumb a {
   color: #ffe9b8;
 }
 
-/* ---------- 7. Komponen ---------- */
+/* ---------- 6. Komponen ---------- */
 .btn {
   display: inline-block;
-  padding: 0.8rem 1.5rem;
+  padding: 12.8px 24px;
   border-radius: 999px;
   font-weight: 700;
   text-decoration: none;
@@ -381,38 +340,38 @@ small {
 }
 
 .btn--utama {
-  background-color: var(--laut-dalam);
-  color: var(--putih);
+  background-color: #0b2f3a;
+  color: #ffffff;
 }
 
 .btn--utama:hover {
-  background-color: var(--laut);
-  color: var(--putih);
+  background-color: #0f6b78;
+  color: #ffffff;
 }
 
 .btn--garis {
-  border-color: var(--laut-dalam);
-  color: var(--laut-dalam);
+  border-color: #0b2f3a;
+  color: #0b2f3a;
 }
 
 .btn--garis:hover {
-  background-color: var(--laut-dalam);
-  color: var(--putih);
+  background-color: #0b2f3a;
+  color: #ffffff;
 }
 
 .btn--senja {
-  background-color: var(--senja);
-  color: var(--laut-dalam);
+  background-color: #f2b04c;
+  color: #0b2f3a;
 }
 
 .btn--senja:hover {
   background-color: #f7c566;
-  color: var(--laut-dalam);
+  color: #0b2f3a;
 }
 
 /* Info strip: fakta singkat desa */
 .info-strip {
-  background-color: var(--laut-dalam);
+  background-color: #0b2f3a;
   color: #d3e5e9;
 }
 
@@ -426,7 +385,7 @@ small {
 
 .info-strip li {
   flex: 1 1 200px;
-  padding: 1.4rem 1.2rem;
+  padding: 22.4px 19.2px;
   border-left: 1px solid rgba(255, 255, 255, 0.15);
 }
 
@@ -436,9 +395,9 @@ small {
 
 .info-strip strong {
   display: block;
-  font-family: var(--font-judul);
-  font-size: 1.6rem;
-  color: var(--senja);
+  font-family: "Trebuchet MS", "Lucida Grande", Arial, sans-serif;
+  font-size: 25.6px;
+  color: #f2b04c;
   line-height: 1.2;
 }
 
@@ -446,16 +405,16 @@ small {
 .cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.6rem;
+  gap: 25.6px;
 }
 
 .card {
   flex: 1 1 290px;
   display: flex;
   flex-direction: column;
-  background-color: var(--putih);
+  background-color: #ffffff;
   border: 1px solid #cfe0e4;
-  border-radius: var(--radius-kecil);
+  border-radius: 6px;
   overflow: hidden;
 }
 
@@ -466,7 +425,7 @@ small {
 }
 
 .card-body {
-  padding: 1.3rem 1.4rem 1.5rem;
+  padding: 20.8px 22.4px 24px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -485,7 +444,7 @@ small {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 3rem;
+  gap: 48px;
 }
 
 .split>* {
@@ -497,7 +456,7 @@ small {
 }
 
 .split figure img {
-  border-radius: var(--radius-besar) var(--radius-kecil) var(--radius-besar) var(--radius-kecil);
+  border-radius: 28px 6px 28px 6px;
 }
 
 figure {
@@ -505,49 +464,49 @@ figure {
 }
 
 figcaption {
-  font-size: 0.9rem;
+  font-size: 14.4px;
   color: #566b72;
-  margin-top: 0.6rem;
+  margin-top: 9.6px;
 }
 
 blockquote {
   margin: 0;
-  padding: 0.4rem 0 0.4rem 1.6rem;
-  border-left: 6px solid var(--senja);
-  font-family: var(--font-judul);
-  font-size: clamp(1.3rem, 2.6vw, 1.8rem);
+  padding: 6.4px 0 6.4px 25.6px;
+  border-left: 6px solid #f2b04c;
+  font-family: "Trebuchet MS", "Lucida Grande", Arial, sans-serif;
+  font-size: 28px;
   font-weight: 600;
   line-height: 1.35;
-  color: var(--laut-dalam);
-  max-width: 34em;
+  color: #0b2f3a;
+  max-width: 900px;
 }
 
 blockquote cite {
   display: block;
-  margin-top: 0.8rem;
-  font-family: var(--font-isi);
-  font-size: 1rem;
+  margin-top: 12.8px;
+  font-family: "Segoe UI", Calibri, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
   font-weight: 400;
   font-style: normal;
-  color: var(--karang-gelap);
+  color: #33484f;
 }
 
 .callout {
   background-color: #fff3da;
-  border: 2px solid var(--senja);
-  border-radius: var(--radius-kecil);
-  padding: 1.2rem 1.4rem;
+  border: 2px solid #f2b04c;
+  border-radius: 6px;
+  padding: 19.2px 22.4px;
 }
 
 .callout p:last-child {
   margin-bottom: 0;
 }
 
-/* ---------- 8. Galeri ---------- */
+/* ---------- 7. Galeri ---------- */
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.4rem;
+  gap: 22.4px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -558,9 +517,9 @@ blockquote cite {
 }
 
 .gallery figure {
-  background-color: var(--putih);
+  background-color: #ffffff;
   border: 1px solid #cfe0e4;
-  border-radius: var(--radius-kecil);
+  border-radius: 6px;
   overflow: hidden;
   height: 100%;
 }
@@ -572,9 +531,9 @@ blockquote cite {
 }
 
 .gallery figcaption {
-  padding: 0.8rem 1rem 1rem;
+  padding: 12.8px 16px 16px;
   margin: 0;
-  color: var(--karang-gelap);
+  color: #33484f;
 }
 
 .gallery figcaption strong {
@@ -584,64 +543,64 @@ blockquote cite {
 .gallery-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 9.6px;
   list-style: none;
   padding: 0;
-  margin: 0 0 2rem;
+  margin: 0 0 32px;
 }
 
 .gallery-nav a {
   display: inline-block;
-  padding: 0.45rem 1rem;
-  border: 2px solid var(--laut);
+  padding: 7.2px 16px;
+  border: 2px solid #0f6b78;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
 }
 
 .gallery-nav a:hover {
-  background-color: var(--laut);
-  color: var(--putih);
+  background-color: #0f6b78;
+  color: #ffffff;
 }
 
-/* ---------- 9. Tabel ---------- */
+/* ---------- 8. Tabel ---------- */
 .table-wrap {
   overflow-x: auto;
   /* tabel bisa digeser di layar kecil */
   border: 1px solid #c2d6db;
-  border-radius: var(--radius-kecil);
-  background-color: var(--putih);
+  border-radius: 6px;
+  background-color: #ffffff;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
   min-width: 560px;
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 caption {
   caption-side: top;
   text-align: left;
-  padding: 1rem 1.1rem;
-  font-family: var(--font-judul);
+  padding: 16px 17.6px;
+  font-family: "Trebuchet MS", "Lucida Grande", Arial, sans-serif;
   font-weight: 600;
-  font-size: 1.15rem;
-  color: var(--laut-dalam);
-  background-color: var(--putih);
+  font-size: 18.4px;
+  color: #0b2f3a;
+  background-color: #ffffff;
 }
 
 th,
 td {
-  padding: 0.75rem 1.1rem;
+  padding: 12px 17.6px;
   text-align: left;
   vertical-align: top;
   border-top: 1px solid #d6e5e8;
 }
 
 thead th {
-  background-color: var(--laut-dalam);
-  color: var(--putih);
+  background-color: #0b2f3a;
+  color: #ffffff;
   font-weight: 600;
   border-top: 0;
 }
@@ -656,12 +615,12 @@ tbody tr:hover {
 
 tbody th {
   font-weight: 700;
-  color: var(--laut-dalam);
+  color: #0b2f3a;
 }
 
 tfoot td,
 tfoot th {
-  background-color: var(--busa);
+  background-color: #e1eef0;
   font-weight: 700;
 }
 
@@ -676,43 +635,43 @@ th.tengah {
   text-align: center;
 }
 
-/* ---------- 10. List khusus, FAQ, definisi ---------- */
+/* ---------- 9. List khusus, FAQ, definisi ---------- */
 .check-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 1.2em;
+  margin: 0 0 20px;
 }
 
 .check-list li {
   position: relative;
-  padding-left: 1.9rem;
-  margin-bottom: 0.55rem;
+  padding-left: 30.4px;
+  margin-bottom: 8.8px;
 }
 
 .check-list li::before {
   content: "";
   position: absolute;
-  left: 0.2rem;
-  top: 0.45em;
-  width: 0.55rem;
-  height: 0.9rem;
-  border-right: 3px solid var(--laut);
-  border-bottom: 3px solid var(--laut);
+  left: 3.2px;
+  top: 8px;
+  width: 8.8px;
+  height: 14.4px;
+  border-right: 3px solid #0f6b78;
+  border-bottom: 3px solid #0f6b78;
   transform: rotate(40deg);
 }
 
 .steps {
-  padding-left: 1.4rem;
+  padding-left: 22.4px;
 }
 
 .steps li {
-  margin-bottom: 0.7rem;
-  padding-left: 0.3rem;
+  margin-bottom: 11.2px;
+  padding-left: 4.8px;
 }
 
 .steps li::marker {
   font-weight: 700;
-  color: var(--senja-tua);
+  color: #8a5a07;
 }
 
 dl.fakta {
@@ -720,22 +679,22 @@ dl.fakta {
   flex-wrap: wrap;
   margin: 0;
   border: 1px solid #c2d6db;
-  border-radius: var(--radius-kecil);
-  background-color: var(--putih);
+  border-radius: 6px;
+  background-color: #ffffff;
   overflow: hidden;
 }
 
 dl.fakta dt,
 dl.fakta dd {
   margin: 0;
-  padding: 0.75rem 1.1rem;
+  padding: 12px 17.6px;
   border-top: 1px solid #d6e5e8;
 }
 
 dl.fakta dt {
   flex: 0 0 36%;
   font-weight: 700;
-  color: var(--laut-dalam);
+  color: #0b2f3a;
   background-color: #edf5f6;
 }
 
@@ -749,17 +708,17 @@ dl.fakta dt:first-of-type+dd {
 }
 
 details {
-  background-color: var(--putih);
+  background-color: #ffffff;
   border: 1px solid #c2d6db;
-  border-radius: var(--radius-kecil);
-  margin-bottom: 0.8rem;
+  border-radius: 6px;
+  margin-bottom: 12.8px;
 }
 
 summary {
   cursor: pointer;
-  padding: 1rem 1.2rem;
+  padding: 16px 19.2px;
   font-weight: 700;
-  color: var(--laut-dalam);
+  color: #0b2f3a;
 }
 
 details[open] summary {
@@ -767,59 +726,59 @@ details[open] summary {
 }
 
 details p {
-  padding: 1rem 1.2rem 0;
+  padding: 16px 19.2px 0;
 }
 
 details p:last-child {
-  padding-bottom: 0.2rem;
+  padding-bottom: 3.2px;
 }
 
 .timeline {
   list-style: none;
   margin: 0;
-  padding: 0 0 0 1.6rem;
-  border-left: 4px solid var(--savana);
+  padding: 0 0 0 25.6px;
+  border-left: 4px solid #b0963e;
 }
 
 .timeline li {
-  margin-bottom: 1.4rem;
+  margin-bottom: 22.4px;
   position: relative;
 }
 
 .timeline li::before {
   content: "";
   position: absolute;
-  left: -2.05rem;
-  top: 0.4rem;
+  left: -32.8px;
+  top: 6.4px;
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background-color: var(--senja);
-  border: 3px solid var(--langit);
+  background-color: #f2b04c;
+  border: 3px solid #f4f9fa;
 }
 
 .timeline strong {
   display: block;
-  font-family: var(--font-judul);
-  font-size: 1.15rem;
+  font-family: "Trebuchet MS", "Lucida Grande", Arial, sans-serif;
+  font-size: 18.4px;
 }
 
 .badge {
   display: inline-block;
-  padding: 0.1rem 0.6rem;
+  padding: 1.6px 9.6px;
   border-radius: 999px;
-  background-color: var(--senja);
-  color: var(--laut-dalam);
-  font-size: 0.85rem;
+  background-color: #f2b04c;
+  color: #0b2f3a;
+  font-size: 13.6px;
   font-weight: 700;
 }
 
-/* ---------- 11. Footer ---------- */
+/* ---------- 10. Footer ---------- */
 .site-footer {
-  background-color: var(--laut-dalam);
+  background-color: #0b2f3a;
   color: #a9c8cf;
-  padding: 3rem 0 1.5rem;
-  font-size: 0.98rem;
+  padding: 48px 0 24px;
+  font-size: 15.68px;
 }
 
 .site-footer a {
@@ -829,7 +788,7 @@ details p:last-child {
 .footer-cols {
   display: flex;
   flex-wrap: wrap;
-  gap: 2.5rem;
+  gap: 40px;
 }
 
 .footer-cols>div {
@@ -837,8 +796,10 @@ details p:last-child {
 }
 
 .site-footer h2 {
-  font-size: 1.1rem;
-  color: var(--putih);
+  font-size: 17.6px;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  color: #ffffff;
   letter-spacing: 0;
 }
 
@@ -849,7 +810,7 @@ details p:last-child {
 }
 
 .site-footer li {
-  margin-bottom: 0.35rem;
+  margin-bottom: 5.6px;
 }
 
 .site-footer address {
@@ -857,24 +818,36 @@ details p:last-child {
 }
 
 .footer-bawah {
-  margin-top: 2.2rem;
-  padding-top: 1.2rem;
+  margin-top: 35.2px;
+  padding-top: 19.2px;
   border-top: 1px solid rgba(255, 255, 255, 0.18);
-  font-size: 0.88rem;
+  font-size: 14.08px;
 }
 
-/* ---------- 12. Responsive ---------- */
+/* ---------- 11. Responsive ---------- */
 
 /* Tablet (<= 900px) */
 @media (max-width: 900px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  blockquote {
+    font-size: 22px;
+  }
+
   .section {
-    padding: 3.2rem 0;
+    padding: 51.2px 0;
   }
 
   .hero-inner {
     flex-direction: column;
-    gap: 2rem;
-    padding-top: 2.5rem;
+    gap: 32px;
+    padding-top: 40px;
   }
 
   .hero-text {
@@ -883,7 +856,8 @@ details p:last-child {
 
   .hero-media {
     align-self: center;
-    width: min(380px, 100%);
+    width: 380px;
+    max-width: 100%;
   }
 
   .info-strip li {
@@ -899,7 +873,19 @@ details p:last-child {
 /* Mobile (<= 640px) */
 @media (max-width: 640px) {
   body {
-    font-size: 1rem;
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  blockquote {
+    font-size: 21px;
   }
 
   .header-inner {
@@ -908,7 +894,7 @@ details p:last-child {
   }
 
   .main-nav a {
-    padding: 0.45rem 0.85rem;
+    padding: 7.2px 13.6px;
   }
 
   .site-header {
@@ -918,7 +904,7 @@ details p:last-child {
 
   .info-strip li {
     flex-basis: 50%;
-    padding: 1rem;
+    padding: 16px;
   }
 
   dl.fakta dt,
@@ -936,27 +922,9 @@ details p:last-child {
   }
 }
 
-/* Hormati preferensi pengguna yang mengurangi animasi */
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
 
-  * {
-    transition: none !important;
-  }
-}
-
-/* Cetak: sembunyikan navigasi */
-@media print {
-
-  .site-header,
-  .hero-actions {
-    display: none;
-  }
-}
 
 /* Utilitas kecil */
 .gap-atas {
-  margin-top: 3rem;
+  margin-top: 48px;
 }
