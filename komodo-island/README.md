@@ -59,6 +59,7 @@ NAMA KELOMPOK : Kelompok 2
 
 
 ### STRUKTUR FOLDER
+------------------------------------------------------------------------
 
 komodo-island/
 
