@@ -2,20 +2,7 @@
    Komodo Island - style.css
    Tugas Kelompok Desain Web (HTML5 + CSS3 murni)
 
-   Daftar isi:
-   1. Embedded font (@font-face)
-   2. Variabel & reset
-   3. Tipografi
-   4. Layout dasar (container, section)
-   5. Header & navigasi (Flexbox)
-   6. Hero
-   7. Komponen: tombol, kartu, info strip, kutipan
-   8. Galeri
-   9. Tabel
-  10. List khusus, FAQ, kalender
-  11. Footer
-  12. Responsive (media query)
-   ========================================================= */
+
 
 /* ---------- 1. Embedded font ---------- */
 @font-face {
