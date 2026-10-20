@@ -19,6 +19,7 @@
 
 /* ---------- 1. Embedded font ---------- */
 @font-face {
+<<<<<<< HEAD
   font-family: "Bricolage";
   src: url("../fonts/bricolage-600.woff2") format("woff2");
   font-weight: 600;
@@ -26,6 +27,9 @@
   font-display: swap;
 }
 @font-face {
+=======
+  /* FONT JUDUL: satu file, dipakai untuk semua teks judul dan teks tebal */
+>>>>>>> 236ea26a16ae941b93957c0f78d731aad4f43745
   font-family: "Bricolage";
   src: url("../fonts/bricolage-800.woff2") format("woff2");
   font-weight: 800;
@@ -33,12 +37,17 @@
   font-display: swap;
 }
 @font-face {
+<<<<<<< HEAD
+=======
+  /* FONT ISI: satu file, dipakai untuk semua teks biasa */
+>>>>>>> 236ea26a16ae941b93957c0f78d731aad4f43745
   font-family: "Source Sans";
   src: url("../fonts/sourcesans-400.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
+<<<<<<< HEAD
 @font-face {
   font-family: "Source Sans";
   src: url("../fonts/sourcesans-600.woff2") format("woff2");
@@ -57,6 +66,12 @@
 /* ---------- 2. Variabel & reset ---------- */
 :root {
   /* Palet warna: laut toska, savana kering, dan langit senja */
+=======
+
+/* ---------- 2. Variabel & reset ---------- */
+:root {
+  /* Palet warna */
+>>>>>>> 236ea26a16ae941b93957c0f78d731aad4f43745
   --laut-dalam: #0b2f3a;
   --laut: #0f6b78;
   --savana: #b0963e;
@@ -90,6 +105,10 @@ html {
 body {
   margin: 0;
   font-family: var(--font-isi);
+<<<<<<< HEAD
+=======
+  font-synthesis: none;
+>>>>>>> 236ea26a16ae941b93957c0f78d731aad4f43745
   font-size: 1.0625rem;
   line-height: 1.65;
   color: var(--karang-gelap);
@@ -137,18 +156,31 @@ h2 {
 }
 h3 {
   font-size: 1.3rem;
+<<<<<<< HEAD
   font-weight: 600;
 }
 h4 {
   font-size: 1.1rem;
   font-weight: 600;
+=======
+  font-weight: 800;
+}
+h4 {
+  font-size: 1.1rem;
+  font-weight: 800;
+>>>>>>> 236ea26a16ae941b93957c0f78d731aad4f43745
 }
 p {
   margin: 0 0 1em;
   max-width: 68ch;
 }
 strong {
+<<<<<<< HEAD
   font-weight: 700;
+=======
+  font-family: var(--font-judul);
+  font-weight: 800;
+>>>>>>> 236ea26a16ae941b93957c0f78d731aad4f43745
   color: var(--laut-dalam);
 }
 small {
@@ -195,7 +227,12 @@ small {
   background: var(--senja);
   color: var(--laut-dalam);
   padding: 0.6rem 1rem;
+<<<<<<< HEAD
   font-weight: 700;
+=======
+  font-family: var(--font-judul);
+  font-weight: 800;
+>>>>>>> 236ea26a16ae941b93957c0f78d731aad4f43745
   z-index: 100;
 }
 .skip-link:focus {
@@ -258,7 +295,8 @@ small {
   border-radius: 999px;
   color: #d3e5e9;
   text-decoration: none;
-  font-weight: 600;
+  font-family: var(--font-judul);
+  font-weight: 800;
   transition: background-color 0.2s, color 0.2s;
 }
 .main-nav a:hover {
@@ -336,7 +374,8 @@ small {
   display: inline-block;
   padding: 0.8rem 1.5rem;
   border-radius: 999px;
-  font-weight: 700;
+  font-family: var(--font-judul);
+  font-weight: 800;
   text-decoration: none;
   border: 2px solid transparent;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
@@ -424,7 +463,8 @@ small {
   flex: 1;
 }
 .card-link {
-  font-weight: 700;
+  font-family: var(--font-judul);
+  font-weight: 800;
 }
 
 /* Dua kolom teks + gambar */
@@ -458,7 +498,11 @@ blockquote {
   border-left: 6px solid var(--senja);
   font-family: var(--font-judul);
   font-size: clamp(1.3rem, 2.6vw, 1.8rem);
+<<<<<<< HEAD
   font-weight: 600;
+=======
+  font-weight: 800;
+>>>>>>> 236ea26a16ae941b93957c0f78d731aad4f43745
   line-height: 1.35;
   color: var(--laut-dalam);
   max-width: 34em;
@@ -529,7 +573,8 @@ blockquote cite {
   border: 2px solid var(--laut);
   border-radius: 999px;
   text-decoration: none;
-  font-weight: 600;
+  font-family: var(--font-judul);
+  font-weight: 800;
 }
 .gallery-nav a:hover {
   background-color: var(--laut);
@@ -554,7 +599,11 @@ caption {
   text-align: left;
   padding: 1rem 1.1rem;
   font-family: var(--font-judul);
+<<<<<<< HEAD
   font-weight: 600;
+=======
+  font-weight: 800;
+>>>>>>> 236ea26a16ae941b93957c0f78d731aad4f43745
   font-size: 1.15rem;
   color: var(--laut-dalam);
   background-color: var(--putih);
@@ -569,7 +618,12 @@ td {
 thead th {
   background-color: var(--laut-dalam);
   color: var(--putih);
+<<<<<<< HEAD
   font-weight: 600;
+=======
+  font-family: var(--font-judul);
+  font-weight: 800;
+>>>>>>> 236ea26a16ae941b93957c0f78d731aad4f43745
   border-top: 0;
 }
 tbody tr:nth-child(even) {
@@ -579,13 +633,23 @@ tbody tr:hover {
   background-color: #fff3da;
 }
 tbody th {
+<<<<<<< HEAD
   font-weight: 700;
+=======
+  font-family: var(--font-judul);
+  font-weight: 800;
+>>>>>>> 236ea26a16ae941b93957c0f78d731aad4f43745
   color: var(--laut-dalam);
 }
 tfoot td,
 tfoot th {
   background-color: var(--busa);
+<<<<<<< HEAD
   font-weight: 700;
+=======
+  font-family: var(--font-judul);
+  font-weight: 800;
+>>>>>>> 236ea26a16ae941b93957c0f78d731aad4f43745
 }
 td.angka,
 th.angka {
@@ -628,7 +692,12 @@ th.tengah {
   padding-left: 0.3rem;
 }
 .steps li::marker {
+<<<<<<< HEAD
   font-weight: 700;
+=======
+  font-family: var(--font-judul);
+  font-weight: 800;
+>>>>>>> 236ea26a16ae941b93957c0f78d731aad4f43745
   color: var(--senja-tua);
 }
 
@@ -649,7 +718,12 @@ dl.fakta dd {
 }
 dl.fakta dt {
   flex: 0 0 36%;
+<<<<<<< HEAD
   font-weight: 700;
+=======
+  font-family: var(--font-judul);
+  font-weight: 800;
+>>>>>>> 236ea26a16ae941b93957c0f78d731aad4f43745
   color: var(--laut-dalam);
   background-color: #edf5f6;
 }
@@ -670,7 +744,12 @@ details {
 summary {
   cursor: pointer;
   padding: 1rem 1.2rem;
+<<<<<<< HEAD
   font-weight: 700;
+=======
+  font-family: var(--font-judul);
+  font-weight: 800;
+>>>>>>> 236ea26a16ae941b93957c0f78d731aad4f43745
   color: var(--laut-dalam);
 }
 details[open] summary {
@@ -717,7 +796,12 @@ details p:last-child {
   background-color: var(--senja);
   color: var(--laut-dalam);
   font-size: 0.85rem;
+<<<<<<< HEAD
   font-weight: 700;
+=======
+  font-family: var(--font-judul);
+  font-weight: 800;
+>>>>>>> 236ea26a16ae941b93957c0f78d731aad4f43745
 }
 
 /* ---------- 11. Footer ---------- */

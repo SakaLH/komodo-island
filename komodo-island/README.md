@@ -9,10 +9,6 @@ ANGGOTA & PEMBAGIAN TUGAS
 4. (Prevansyah Sjafar - 4525210057)  CSS & Layout             : style.css, box model, Flexbox, responsive, embedded font
 5. (Saka Laksmana Harimurti - 4525210067)  Quality & Presenter      : uji link/path/responsive, demo, penjelasan keputusan desain
 
-CARA MENJALANKAN
-1. Ekstrak file ZIP.
-2. Buka index.html dengan browser (klik dua kali). Tidak perlu server atau instalasi apa pun.
-
 STRUKTUR FOLDER
 komodo-island/
   index.html   Beranda (hero, fakta singkat, 4 destinasi, cara menuju, kutipan)
